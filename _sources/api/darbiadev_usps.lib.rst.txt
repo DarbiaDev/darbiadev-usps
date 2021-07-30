@@ -1,0 +1,21 @@
+darbiadev\_usps.lib package
+===========================
+
+Submodules
+----------
+
+darbiadev\_usps.lib.lib module
+------------------------------
+
+.. automodule:: darbiadev_usps.lib.lib
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: darbiadev_usps.lib
+   :members:
+   :undoc-members:
+   :show-inheritance:
