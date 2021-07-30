@@ -1,12 +1,12 @@
 [tool.poetry]
 name = "darbiadev-usps"
-version = "0.2.0"
+version = "0.3.0"
 description = "darbiadev-usps"
 authors = ["Bradley Reynolds <bradley.reynolds@darbia.dev>"]
 license = "MIT"
 readme = "README.md"
-repository = "https://gitlab.com/darbia/darbiadev-usps"
-documentation = "https://darbia.gitlab.io/darbiadev-usps"
+repository = "https://github.com/DarbiaDev/darbiadev-usps"
+documentation = "https://darbiadev.github.io/darbiadev-usps/"
 
 [tool.poetry.dependencies]
 python = "^3.9"
