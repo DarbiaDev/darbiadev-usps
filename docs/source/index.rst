@@ -1,8 +1,3 @@
-.. darbiadev-usps documentation master file, created by
-   sphinx-quickstart on Thu Jul 29 21:47:59 2021.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 Welcome to darbiadev-usps's documentation!
 ==========================================
 

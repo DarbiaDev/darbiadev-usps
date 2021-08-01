@@ -39,6 +39,7 @@ class USPSServices:
             self,
             tracking_number: str
     ) -> dict:
+        """Get tracking details for a tracking number"""
         if not isinstance(tracking_number, str):
             raise ValueError('tracking_number must be a string')
 
