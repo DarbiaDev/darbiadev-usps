@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "darbiadev-usps"
-version = "0.4.0"
+version = "0.5.0"
 description = "darbiadev-usps"
 authors = ["Bradley Reynolds <bradley.reynolds@darbia.dev>"]
 license = "MIT"
