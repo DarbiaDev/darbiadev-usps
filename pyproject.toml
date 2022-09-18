@@ -56,3 +56,9 @@ addopts = "tests -r a -v --doctest-modules src"
 
 [tool.pylint.format]
 max-line-length = 120
+
+[tool.pylint.messages_control]
+disable = "W0238, R0903"
+# justifications:
+# W0238 (unused-private-member) - FIXME: is the unused member necessary?
+# R0903 (too-few-public-methods) - FIXME: implement more methods
