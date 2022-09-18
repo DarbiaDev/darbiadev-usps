@@ -25,27 +25,19 @@ class USPSServices:
     def _make_request(
         self,
         params: dict[str, str],
-        method: str = 'post',
+        method: str = "post",
         timeout: int = 500,
     ) -> str:
-        args = {
-            'method': method,
-            'url': self.base_url,
-            'params': params,
-            "timeout": timeout
-        }
+        args = {"method": method, "url": self.base_url, "params": params, "timeout": timeout}
 
         response = requests.request(**args)
         response.raise_for_status()
         return response.content.decode()
 
-    def track(
-        self,
-        tracking_number: str
-    ) -> dict:
+    def track(self, tracking_number: str) -> dict:
         """Get tracking details for a tracking number"""
         if not isinstance(tracking_number, str):
-            raise ValueError('tracking_number must be a string')
+            raise ValueError("tracking_number must be a string")
 
         track_xml = f"""
             <?xml version="1.0" encoding="UTF-8" ?>
@@ -54,7 +46,7 @@ class USPSServices:
             </TrackRequest>
             """
 
-        content = self._make_request(params={'API': 'TrackV2', 'xml': track_xml})
+        content = self._make_request(params={"API": "TrackV2", "xml": track_xml})
         data = xmltodict.parse(content, dict_constructor=dict)
 
         return data
