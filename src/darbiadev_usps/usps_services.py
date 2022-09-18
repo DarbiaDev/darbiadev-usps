@@ -1,4 +1,6 @@
-#!/usr/bin/env python
+"""A wrapper for USPS' API"""
+
+from __future__ import annotations
 
 import requests
 import xmltodict
@@ -11,24 +13,26 @@ class USPSServices:
     """
 
     def __init__(
-            self,
-            base_url: str,
-            user_id: str,
-            password: str,
+        self,
+        base_url: str,
+        user_id: str,
+        password: str,
     ):
         self.base_url = base_url
         self.__user_id: str = user_id
         self.__password: str = password
 
     def _make_request(
-            self,
-            params: dict[str, str],
-            method: str = 'post'
+        self,
+        params: dict[str, str],
+        method: str = 'post',
+        timeout: int = 500,
     ) -> str:
         args = {
             'method': method,
             'url': self.base_url,
-            'params': params
+            'params': params,
+            "timeout": timeout
         }
 
         response = requests.request(**args)
@@ -36,8 +40,8 @@ class USPSServices:
         return response.content.decode()
 
     def track(
-            self,
-            tracking_number: str
+        self,
+        tracking_number: str
     ) -> dict:
         """Get tracking details for a tracking number"""
         if not isinstance(tracking_number, str):
